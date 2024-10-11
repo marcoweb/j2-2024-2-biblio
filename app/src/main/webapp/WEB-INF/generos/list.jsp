@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Gêneros</title>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>
     <body>
         <h1>Gêneros</h1>
