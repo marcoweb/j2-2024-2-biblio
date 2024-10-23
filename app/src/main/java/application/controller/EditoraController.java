@@ -68,4 +68,22 @@ public class EditoraController {
 
         return "redirect:/editoras/list";
     }
+
+    @RequestMapping("/delete")
+    public String delete(@RequestParam("id") long id, Model ui) {
+        Optional<Editora> resultado = editoraRepo.findById(id);
+
+        if(resultado.isPresent()) {
+            ui.addAttribute("editora", resultado.get());
+            return "/editoras/delete";
+        }
+
+        return "redirect:/editoras/list";
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public String delete(@RequestParam("id") long id) {
+        editoraRepo.deleteById(id);
+        return "redirect:/editoras/list";
+    }
 }
