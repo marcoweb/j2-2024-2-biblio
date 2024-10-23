@@ -8,6 +8,7 @@
         <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>
     <body>
+        <%@ include file="../_template/menubar.jsp" %>
         <div class="container">
             <h1>Livros</h1>
             <a href="/livros/insert" class="btn btn-primary">Novo Livro</a>
@@ -17,6 +18,7 @@
                     <th>titulo</th>
                     <th>genero</th>
                     <th>editora</th>
+                    <th>&nbsp;</th>
                 </tr>
                 <c:forEach var="l" items="${livros}">
                     <tr>
@@ -24,6 +26,10 @@
                         <td>${l.titulo}</td>
                         <td>${l.genero.nome}</td>
                         <td>${l.editora.nome}</td>
+                        <td>
+                            <a href="/livros/update?id=${l.id}" class="btn btn-warning">Editar</a>
+                            <a href="/livros/delete?id=${l.id}" class="btn btn-danger">Remover</a>
+                        </td>
                     </tr>
                 </c:forEach>
             </table>
