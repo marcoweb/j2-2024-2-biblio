@@ -21,13 +21,6 @@
 		"vscode": {
 			"extensions": ["vscjava.vscode-java-pack", "humao.rest-client", "vscjava.vscode-gradle"]
 		}
-	},
-	"portsAttributes": {
-		"8080": {
-			"label": "Application",
-			"onAutoForward": "openBrowser",
-			"protocol": "https"
-		}
 	}
 	
 
