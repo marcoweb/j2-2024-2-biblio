@@ -22,6 +22,12 @@
 			"extensions": ["vscjava.vscode-java-pack", "humao.rest-client", "vscjava.vscode-gradle"]
 		}
 	},
+	"portsAttributes": {
+		"8080": {
+			"label": "Application",
+			"onAutoForward": "openBrowser"
+		}
+	}
 	
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

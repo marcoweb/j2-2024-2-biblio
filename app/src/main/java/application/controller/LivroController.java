@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 
@@ -45,7 +44,7 @@ public class LivroController {
         livro.setEditora(editoraRepo.findById(idEditora).get());
 
         livroRepo.save(livro);
-        return "redirect:/livros/list";
+        return "forward:/livros/list";
     }
 
     @RequestMapping(value = {"/list", ""})
@@ -65,7 +64,7 @@ public class LivroController {
             return "/livros/delete";
         }
 
-        return "redirect:/livros/list";
+        return "forward:/livros/list";
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
