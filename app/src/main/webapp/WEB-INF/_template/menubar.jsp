@@ -18,6 +18,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/editoras/list">Editoras</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/autores/list">Autores</a>
+          </li>
         </ul>
       </div>
     </div>
